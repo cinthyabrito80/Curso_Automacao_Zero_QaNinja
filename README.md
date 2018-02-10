@@ -1,0 +1,1 @@
+# Curso_Automacao_Zero_QaNinja
