@@ -21,11 +21,38 @@ Funcionalidade: Cadastro
     #     Quando faço o cadastro com estes dados
     #     Então eu redireciono para o painel de tarefas
 
-    Cenario: Cadastro Simples
-        Dados que eu acessei a pagina de cadastro
+    Cenário: Cadastro Simples
+        Dado que eu acessei a pagina de cadastro
         E possuo os seguinte dados:
             | Nome  | Cintia                     |
             | Email | cinthya_brito@yahoo.com.br |
             | Senha | 123456                     |
-        Quando faço o cadastro
+        Quando faço o meu cadastro
         Então sou redirecionado para o painel de tarefas
+
+    Cenário: Email não enviado
+        Dado que eu acessei a pagina de cadastro
+        E possuo os seguinte dados:
+            | Nome  | Cintia |
+            | Email |        |
+            | Senha | 123456 |
+        Quando faço o meu cadastro
+        Então devo ver uma mensagem de alerta "Email é obrigatório."
+    
+    Cenário: Senha não informada
+        Dado que eu acessei a pagina de cadastro
+        E possuo os seguinte dados:
+            | Nome  | Cintia                     |
+            | Email | cinthya_brito@yahoo.com.br |
+            | Senha |                            |
+        Quando faço o meu cadastro
+        Então devo ver uma mensagem de alerta "Sua senha deve ser pelo menos 6 caracteres."
+    
+    Cenário: Mínimo de caracteres para senha
+        Dado que eu acessei a pagina de cadastro
+        E possuo os seguinte dados:
+            | Nome  | Cintia                     |
+            | Email | cinthya_brito@yahoo.com.br |
+            | Senha | 12345                      |
+        Quando faço o meu cadastro
+        Então devo ver uma mensagem de alerta "Sua senha deve ser pelo menos 6 caracteres."
