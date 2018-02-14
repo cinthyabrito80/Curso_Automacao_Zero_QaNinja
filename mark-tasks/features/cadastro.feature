@@ -55,4 +55,4 @@ Funcionalidade: Cadastro
             | Email | cinthya_brito@yahoo.com.br |
             | Senha | 12345                      |
         Quando faço o meu cadastro
-        Então devo ver uma mensagem de alerta "Sua senha deve ser pelo menos 6 caracteres."
+        Então devo ver uma mensagem de alerta "Sua senha deve ser pelo menos 6 caracteres"
