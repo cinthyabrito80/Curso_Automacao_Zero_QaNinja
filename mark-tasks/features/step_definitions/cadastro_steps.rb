@@ -1,6 +1,9 @@
 Dados("que eu acessei a pagina de cadastro") do
-    visit 'http://marktasks.herokuapp.com/register'
-    expect(page).to have_content 'Criar uma conta Mark'
+    #@cadastros = CadastroPage.new
+    @cadastros.load
+
+    # visit 'http://marktasks.herokuapp.com/register'
+    # expect(page).to have_content 'Criar uma conta Mark'
   end
   
   Dados("possuo os seguinte dados:") do |table|
@@ -25,7 +28,6 @@ Dados("que eu acessei a pagina de cadastro") do
 
   Então("devo ver uma mensagem de alerta {string}") do |mensagem_alerta|
     expect(page).to have_content mensagem_alerta
-    sleep 10
   end
  
   

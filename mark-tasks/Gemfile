@@ -2,9 +2,8 @@
 
 source "http://rubygems.org"
 
-git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
-
 gem "cucumber"
 gem "rspec"
 gem "selenium-webdriver"
 gem "capybara"
+gem "site_prism"
