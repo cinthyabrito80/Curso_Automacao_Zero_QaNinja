@@ -3,3 +3,8 @@ Before do
 
     @cadastros = CadastroPage.new
 end
+
+Before('@register') do
+    @cadastros.load
+    @cadastros.dados_cadastro('Cintia', 'cinthya_brito@yahoo.com.br', '123456')
+end

@@ -1,41 +1,35 @@
 #language:pt
 
 Funcionalidade: Cadastro
-    Sendo um usuario que precisa controlar minhas atividades
-    Posso me cadastrar com meus dados pessoais
-    Para que possa ter um controle e gerenciamento dessas atividades
-
-    Contexto: Cadastro
-        Dado que eu acessei a pagina de cadastro
-
-    @cad
-    Cenário: Cadastro Simples
-
-        E possuo os seguinte dados:
-            | Nome  | Cintia                     |
-            | Email | cinthya_brito@yahoo.com.br |
-            | Senha | 123456                     |
-        Quando faço o meu cadastro
-        Então sou redirecionado para o painel de tarefas
-
-    Esquema do Cenario: Tentativa de cadastro
-
-        E possuo os seguinte dados:
-            | Nome  | <nome>  |
-            | Email | <email> |
-            | Senha | <senha> |
-        Quando faço o meu cadastro
-        Então devo ver uma mensagem de alerta "<alerta>"
-
-        Exemplos:
-            | nome   | email                      | senha  | alerta                                      |
-            | Cintia |                            | 123456 | Email é obrigatório.                        |
-            | Cintia | cinthya_brito@yahoo.com.br |        | Informe uma senha.                          |
-            | Cintia | cinthya_brito@yahoo.com.br | 12345  | Sua senha deve ter pelo menos 6 caracteres. |
-            | Cintia | cinthya_brito@yahoo.com.br | 1234   | Sua senha deve ter pelo menos 6 caracteres. |
-            | Cintia | cinthya_brito@yahoo.com.br | 123    | Sua senha deve ter pelo menos 6 caracteres. |
-            | Cintia | cinthya_brito@yahoo.com.br | 12     | Sua senha deve ter pelo menos 6 caracteres. |
-            | Cintia | cinthya_brito@yahoo.com.br | 1      | Sua senha deve ter pelo menos 6 caracteres. |
+     Sendo um usuario que precisa controlar minhas atividades
+      Posso me cadastrar com meus dados pessoais
+      Para que possa ter um controle e gerenciamento dessas atividades
+  
+     Contexto: Cadastro
+         Dado que eu acessei a pagina de cadastro
+ 
+     @cad
+     Cenário: Cadastro Simples
+ 
+         E possuo os seguinte dados: "<nome>""<email>""<senha>"
+         Quando faço o meu cadastro
+         Então sou redirecionado para o painel de tarefas
+ 
+     Esquema do Cenario: Tentativa de cadastro
+ 
+         E possuo os seguinte dados: "<nome>""<email>""<senha>"
+         Quando faço o meu cadastro
+         Então devo ver uma mensagem de alerta "<alerta>"
+ 
+         Exemplos:
+             | nome   | email                      | senha  | alerta                                      |
+             | Cintia |                            | 123456 | Email é obrigatório.                        |
+             | Cintia | cinthya_brito@yahoo.com.br |        | Informe uma senha.                          |
+             | Cintia | cinthya_brito@yahoo.com.br | 12345  | Sua senha deve ter pelo menos 6 caracteres. |
+             | Cintia | cinthya_brito@yahoo.com.br | 1234   | Sua senha deve ter pelo menos 6 caracteres. |
+             | Cintia | cinthya_brito@yahoo.com.br | 123    | Sua senha deve ter pelo menos 6 caracteres. |
+             | Cintia | cinthya_brito@yahoo.com.br | 12     | Sua senha deve ter pelo menos 6 caracteres. |
+             | Cintia | cinthya_brito@yahoo.com.br | 1      | Sua senha deve ter pelo menos 6 caracteres. |
 
     # ANTIGOS CENARIOS DE TESTES
     #  Cenário: Cadastro Simples
